@@ -1,4 +1,3 @@
-
 """
 Title: Looking for Fermat's Last Theorem Near Misses
 Filename: fermat_near_miss.py
@@ -28,7 +27,7 @@ from math import isclose
 
 
 def integer_nth_root(value: int, n: int) -> int:
-    """Return the floor of the n-th root of value using integer binary search.
+    """Return the floor of the n-th root of value.
 
     Arguments:
         value: The non-negative integer whose n-th root is taken.
@@ -44,7 +43,7 @@ def integer_nth_root(value: int, n: int) -> int:
     # Binary search on [low, high]
     low, high = 0, 1
 
-    # Expand high until high^n > value to bracket the root
+    # Expand high until high^n > value
     while pow(high, n) <= value:
         high *= 2
 
@@ -85,8 +84,8 @@ def find_near_misses(n: int, k: int) -> None:
     """
 
     # Smallest near miss trackers
-    best_rel_miss = None  # type: float | None
-    best_record = None    # type: tuple[int, int, int, int, float] | None
+    best_rel_miss = None  
+    best_record = None    
 
     # Outer loop over x values
     for x in range(10, k + 1):
@@ -173,3 +172,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
