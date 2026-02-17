@@ -33,7 +33,7 @@ At the end of the search, it prints a summary of the smallest relative miss disc
 ## Files
 - `fermat_near_miss.py` — main program
 - `README.md` — this file
-- `fermat_near_miss.exe` - .exe file that can be found in the directory in the "dest" folder
+- `fermat_near_miss.exe` - .exe file that can be found in the directory in the "dist/fermat_near_miss" folder path
 
 ## How to Run
 
