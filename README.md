@@ -30,11 +30,6 @@ Whenever a new **smallest relative miss** is found, the program prints a labeled
 current \(x, y, z\), the absolute miss, and the relative miss (both as a fraction and percentage).
 At the end of the search, it prints a summary of the smallest relative miss discovered.
 
-## Files
-- `fermat_near_miss.py` — main program
-- `README.md` — this file
-- `fermat_near_miss.exe` - .exe file that can be found in the directory in the "dist/fermat_near_miss" folder path
-
 ## How to Run
 
 1. Ensure you have Python installed.

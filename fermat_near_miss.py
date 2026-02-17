@@ -103,11 +103,10 @@ def find_near_misses(n: int, k: int) -> None:
             z_n = pow(z, n)
             zp1_n = pow(z + 1, n)
 
-            # For n ≥ 3 and integer x,y, Fermat's Last Theorem implies s != perfect n-th power
-            # But due to integer arithmetic, we still guard against equality.
+            # Checks to see if the absolute miss = 0, just in case
             if s == z_n or s == zp1_n:
 
-                # In this rare case, the absolute miss is 0; skip since it's not a near miss.
+                # In this rare case, the absolute miss is 0; so we skip since it's not a near miss.
                 continue
 
             # Compute absolute miss as the smaller difference
