@@ -40,14 +40,14 @@ def integer_nth_root(value: int, n: int) -> int:
     if value <= 1:
         return value
 
-    # Binary search on [low, high]
+    # Finds a search range on [low, high]
     low, high = 0, 1
 
-    # Expand high until high^n > value
+    # Expand high until high^n > value quickly
     while pow(high, n) <= value:
         high *= 2
 
-    # Invariant: low^n ≤ value < high^n
+    # Binary search within the [low, high] range to determine the integer's root
     while low + 1 < high:
         mid = (low + high) // 2
         mid_pow = pow(mid, n)
@@ -148,13 +148,13 @@ def find_near_misses(n: int, k: int) -> None:
 
 def main() -> None:
     """Main entry: prompt for inputs, validate, run the search, then pause before exiting the IDE."""
-    print("Fermat Near Miss Search (2 < n < 12, k ≥ 10)")
+    print("Collin's Fermat Near Miss Search: ")
 
     # Input prompts with validation and a loop to retry the inputs if an error occurs
     while True:
         try:
-            n_str = input("Enter exponent n (2 < n < 12): ").strip()
-            k_str = input("Enter upper bound k for x and y (k ≥ 10): ").strip()
+            n_str = input("Enter the value for exponent n (2 < n < 12): ").strip()
+            k_str = input("Enter the value for the upper bound k (k ≥ 10): ").strip()
             n = int(n_str)
             k = int(k_str)
             validate_inputs(n, k)

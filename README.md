@@ -41,6 +41,8 @@ At the end of the search, it prints a summary of the smallest relative miss disc
 
 python fermat_near_miss.py
 
+   Or just open the .exe file to run the program.
+
 3. Enter the values for n and k when prompted:
    - `n` as an integer from 3 to 11,
    - `k` as an integer ≥ 10.
